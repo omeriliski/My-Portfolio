@@ -1,2 +1,2 @@
 # My-Portfolio
-My personal website where I talk about myself and you find useful information about frontend and backend 
+My personal website in which I talk about myself and give useful information about frontend and backend 
