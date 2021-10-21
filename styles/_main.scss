@@ -1,17 +1,17 @@
 main{
     .section-1{
         margin: auto;
-        padding: 150px 0px;
+        padding: 250px 0px;
         display: flex;
-        background-color: white;
+        background-color: $section1Background;
         
         .section-1-left{
             @include flex-center;
             width: 50%;
             img{
                 width: 500px;
-                -webkit-box-shadow: -13px -10px 0px 1px $secondTextColor; 
-                box-shadow: -13px -10px 0px 1px $secondTextColor;
+                -webkit-box-shadow: -20px -15px 0px 1px $imgShadow; 
+                box-shadow: -20px -15px 0px 1px $imgShadow;
             }
         }
         .section-1-right{
@@ -19,6 +19,7 @@ main{
             display: flex;
             align-items: center;
             .section-1-right-text-container{
+                color: $section1Color;
                 h3{
                     color: $secondTextColor;
                     margin-bottom: 10px;
@@ -36,7 +37,7 @@ main{
     }
     .section-2{
         padding: 100px 0px;
-        background-color: $section1Background;
+        background-color:$section2Background;
         .section-2-header-container{
             text-align: center;
             h3{
@@ -49,30 +50,63 @@ main{
         .projects-container{
             width: 70%;
             margin: auto;
-            padding: 50px 0px;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3,400px);
+            grid-template-rows: 400px 400px;
+            justify-content: center;
+            row-gap:50px ;
+            column-gap: 4%;
             color: white;
             .project{
-                border-radius: 10px;
+                // border: 1px solid white;
+                border-radius: 5px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 70px;
                 text-align: center;
-                width: 340px;
-                border: 1px solid $secondTextColor;
-                padding: 20px;
                 position: relative;
-                h3{
-                    margin-bottom: 10px;
+                .project-text-container{
+                    width: 100%;
+                    background-color: white;
+                    color: black;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    padding-top: 20px;
+                    h3{
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        height: 30px;
+                    }
                 }
+                .button-container{
+                    width: 100%;
+                    height: 70px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .btn-primary{
+                        height: 50px;
+                        border-radius: 30px;
+                        padding: 0 20px;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 300px;
+                    opacity: .9;
+                    transition: .5s;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                
                 &:hover .project-info{
                     opacity: 1;
                     @include animated-card;
                 }
                 .project-info{
-                    border-radius: 10px;
+                    padding: 0px 30px;
+                    border-radius: 5px;
                     background-color: $secondTextColor;
                     position: absolute;
                     left: 0;
@@ -87,20 +121,21 @@ main{
                         align-items: center;
                         justify-content: space-around;
                         width: 100%;
-                        height: 15%;
-                        margin-top:30px;
+                        height: 20%;
+                        // margin-top:30px;
                         img{
-                            width: 120px;
+                            margin-top: 30px;
+                            width: 100px;
                             height: auto;
                         }
                     }
                     .project-info-text-container{
                         @include flex-center;
                         flex-direction: column;
-                        height: 85%;
+                        height: 80%;
                     }
                     h3{
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                     }
                     .github{
                         @include resetLink;
@@ -108,24 +143,16 @@ main{
                         background-color: white;
                     }
                     p{
-                        margin-bottom: 30px;
+                        margin-bottom: 10px;
                         font-weight: 300;
                     }
                     a{
                         @include resetLink;
+                        margin-top: 10px;
                         font-weight: 600;
                         margin-bottom: 10px;
                     }
                 }
-                &>p{
-                    height: 50px;
-                }
-            }
-            img{
-                width: 100%;
-                height: 400px;
-                transition: .5s;
-                
             }
         }
     }

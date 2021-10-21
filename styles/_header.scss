@@ -10,6 +10,7 @@ body {
 
 .nav-container {
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,24 +24,26 @@ body {
         margin-left: 20px;
         width: 100px;
     }
-
-    ul {
+    nav{
+        padding-top: 20px;
+        height: 100%;
         display: flex;
-        padding: 20px;
-
-        li {
-            @include resetList;
-
-            a {
-                @include resetLink;
-                color: $nabvarTextColor;
-                font-weight: 500;
-                font-size: 18px;
+        align-items: center;
+        align-items: center;
+        ul {
+            display: flex;
+            li {
+                @include resetList;
+                a {
+                    @include resetLink;
+                    color: $nabvarTextColor;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
             }
-        }
-
-        .resources {
-            @include button1;
+            .resources {
+                @include button1;
+            }
         }
     }
 }
@@ -52,10 +55,10 @@ header {
     background-color: $headerBackground;
     position: sticky;
     left: 0;
-    top: 104px;
+    top: 100px;
     z-index: -1;
     .left-header-container { 
-        color: white;
+        color: $headerTextColor;
         img{
             width: 40px;
         }
@@ -68,12 +71,10 @@ header {
         h1 {
             font-size: 50px;
             margin-bottom: 20px;
-}
         }
 
         h2 {
             color: $secondTextColor;
-            
 
             overflow: hidden; /* Ensures the content is not revealed until the animation */
             border-right: .15em solid orange; /* The typwriter cursor */
@@ -81,13 +82,20 @@ header {
             margin: 0 auto; /* Gives that scrolling effect as the typing happens */
             letter-spacing: .15em; /* Adjust as needed */
             animation: 
-              typing 3.5s steps(40, end),
+              typing 3.5s steps(30, end),
               blink-caret .75s step-end infinite;
         }
 
         p {
             margin-top: 10px;
             font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .my-github{
+            @include button1;
+            @include resetLink;
+            background-color: #8838B4;
+            color: white;
         }
     }
 
@@ -98,3 +106,4 @@ header {
             border-radius: 50%;
         }
     }
+}

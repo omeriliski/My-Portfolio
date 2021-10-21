@@ -99,6 +99,7 @@ body {
 
 .nav-container {
   width: 100%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,26 +123,37 @@ body {
   width: 100px;
 }
 
-.nav-container ul {
+.nav-container nav {
+  padding-top: 20px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
 }
 
-.nav-container ul li {
+.nav-container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-container nav ul li {
   list-style-type: none;
   margin-right: 40px;
 }
 
-.nav-container ul li a {
+.nav-container nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-size: 18px;
 }
 
-.nav-container ul .resources {
+.nav-container nav ul .resources {
   background-color: #00FFBB;
   padding: 15px 30px;
   border-radius: 30px;
@@ -161,7 +173,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
-  top: 104px;
+  top: 100px;
   z-index: -1;
 }
 
@@ -184,7 +196,7 @@ header .left-header-container h1 {
   margin-bottom: 20px;
 }
 
-header h2 {
+header .left-header-container h2 {
   color: #00FFBB;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -196,26 +208,37 @@ header h2 {
   /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em;
   /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
-header p {
+header .left-header-container p {
   margin-top: 10px;
   font-size: 18px;
+  margin-bottom: 40px;
 }
 
-.header-img-container {
+header .left-header-container .my-github {
+  background-color: #00FFBB;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+  background-color: #8838B4;
+  color: white;
+}
+
+header .header-img-container {
   margin: 13vh 0px;
 }
 
-.header-img-container img {
+header .header-img-container img {
   border-radius: 50%;
 }
 
 main .section-1 {
   margin: auto;
-  padding: 150px 0px;
+  padding: 250px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,8 +260,8 @@ main .section-1 .section-1-left {
 
 main .section-1 .section-1-left img {
   width: 500px;
-  -webkit-box-shadow: -13px -10px 0px 1px #00FFBB;
-  box-shadow: -13px -10px 0px 1px #00FFBB;
+  -webkit-box-shadow: -20px -15px 0px 1px #212121;
+  box-shadow: -20px -15px 0px 1px #212121;
 }
 
 main .section-1 .section-1-right {
@@ -252,6 +275,7 @@ main .section-1 .section-1-right {
 }
 
 main .section-1 .section-1-right .section-1-right-text-container {
+  color: #262626;
   text-align: justify;
   width: 50%;
   margin-left: 30px;
@@ -270,7 +294,7 @@ main .section-1 .section-1-right .section-1-right-text-container h2 {
 
 main .section-2 {
   padding: 100px 0px;
-  background-color: #262626;
+  background-color: #212121;
 }
 
 main .section-2 .section-2-header-container {
@@ -288,16 +312,23 @@ main .section-2 .section-2-header-container h2 {
 main .section-2 .projects-container {
   width: 70%;
   margin: auto;
-  padding: 50px 0px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (400px)[3];
+      grid-template-columns: repeat(3, 400px);
+  -ms-grid-rows: 400px 400px;
+      grid-template-rows: 400px 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 50px;
+  -webkit-column-gap: 4%;
+          column-gap: 4%;
   color: white;
 }
 
 main .section-2 .projects-container .project {
-  border-radius: 10px;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,16 +339,54 @@ main .section-2 .projects-container .project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 70px;
   text-align: center;
-  width: 340px;
-  border: 1px solid #00FFBB;
-  padding: 20px;
   position: relative;
 }
 
-main .section-2 .projects-container .project h3 {
+main .section-2 .projects-container .project .project-text-container {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 20px;
+}
+
+main .section-2 .projects-container .project .project-text-container h3 {
   margin-bottom: 10px;
+}
+
+main .section-2 .projects-container .project .project-text-container p {
+  height: 30px;
+}
+
+main .section-2 .projects-container .project .button-container {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section-2 .projects-container .project .button-container .btn-primary {
+  height: 50px;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+main .section-2 .projects-container .project img {
+  width: 100%;
+  height: 300px;
+  opacity: .9;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 main .section-2 .projects-container .project:hover .project-info {
@@ -331,7 +400,8 @@ main .section-2 .projects-container .project:hover .project-info {
 }
 
 main .section-2 .projects-container .project .project-info {
-  border-radius: 10px;
+  padding: 0px 30px;
+  border-radius: 5px;
   background-color: #00FFBB;
   position: absolute;
   left: 0;
@@ -354,12 +424,12 @@ main .section-2 .projects-container .project .project-info .info-logo-container 
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-  height: 15%;
-  margin-top: 30px;
+  height: 20%;
 }
 
 main .section-2 .projects-container .project .project-info .info-logo-container img {
-  width: 120px;
+  margin-top: 30px;
+  width: 100px;
   height: auto;
 }
 
@@ -377,11 +447,11 @@ main .section-2 .projects-container .project .project-info .project-info-text-co
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 85%;
+  height: 80%;
 }
 
 main .section-2 .projects-container .project .project-info h3 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 main .section-2 .projects-container .project .project-info .github {
@@ -394,31 +464,21 @@ main .section-2 .projects-container .project .project-info .github {
 }
 
 main .section-2 .projects-container .project .project-info p {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-weight: 300;
 }
 
 main .section-2 .projects-container .project .project-info a {
   text-decoration: none;
+  margin-top: 10px;
   font-weight: 600;
   margin-bottom: 10px;
-}
-
-main .section-2 .projects-container .project > p {
-  height: 50px;
-}
-
-main .section-2 .projects-container img {
-  width: 100%;
-  height: 400px;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 footer {
   height: 200px;
   width: 100%;
-  background-color: #212121;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

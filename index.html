@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,6 +40,7 @@
             <h1>Ömer Iliski</h1>
             <h2>Full Stack Web Developer</h2>
             <p>I’m a Full Stack Developer and love coding</p>
+            <a class="my-github" href="https://github.com/omeriliski">My GitHub</a>
         </div>
         <div class="header-img-container">
             <img src="./images/IMG-20210920-WA0001.jpg" alt="">
@@ -53,11 +57,9 @@
                     <h3>Who I am</h3>
                     <h2>About me</h2>
                     <p>I enjoy programming as if i'm playing a computer game. I started code writing in High School then
-                        i
-                        resumed my career as a computer teacher. I have not only experience in C#, MS SQL but also i am
-                        a
-                        fast learner and always eager to learn new Technologies such as; React, React Native, Vue.js,
-                        Node.js.</p>
+                        i resumed my career as a computer teacher. I have not only experience in C#, MS SQL but also i
+                        am a fast learner and always eager to learn new Technologies such as; React, React Native,
+                        Vue.js,Node.js.</p>
                 </div>
             </div>
         </section>
@@ -68,9 +70,11 @@
             </div>
             <div class="projects-container">
                 <div class="project project-1">
-                    <h3>Amazon Clone</h3>
-                    <p>A Clone-Projekt of amazon.com</p>
                     <img src="./images/project-1.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Amazon Clone</h3>
+                        <p>A Clone-Projekt of amazon.com</p>
+                    </div>
                     <div class="project-info project-1-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/react.png" alt="">
@@ -81,16 +85,21 @@
                             <p>Frontend: React. Meterial UI</p>
                             <p>Backend: Node.js, MongoDB, Rest Api</p>
                             <p>Git, Github, Visual Studio Code, Postman, Heroku, Jira</p>
-                            <p><a class="web" href="https://mern-aws.herokuapp.com/">https://mern-aws.herokuapp.com/</a></p>
-                            <p><a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a></p>
+                            <a class="web" href="https://mern-aws.herokuapp.com/">https://mern-aws.herokuapp.com/</a>
+                            <div class="button-container">
+                                <a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1"> Watch Video</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project project-2">
-                    <h3>Movie App</h3>
-                    <p>A Movie-Projekt by using themoviedb API</p>
                     <img src="./images/project-2.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Movie App</h3>
+                        <p>A Movie-Projekt by using themoviedb API</p>
+                    </div>
                     <div class="project-info project-2-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/react.png" alt="">
@@ -100,15 +109,17 @@
                             <h3>Movie App</h3>
                             <p>Frontend: React, Reactstrap</p>
                             <p>Others: Axios, themoviedb API , Git, Github, Visual Studio Code, Postman, Heroku, Jira</p>
-                            <p><a class="web" href="https://movieapp06.herokuapp.com/">https://movieapp06.herokuapp.com/</a></p>
-                            <p><a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a></p>
+                            <a class="web" href="https://movieapp06.herokuapp.com/">https://movieapp06.herokuapp.com/</a>
+                            <a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a>
                         </div>
                     </div>
                 </div>
                 <div class="project project-3">
-                    <h3>Twitter Bot</h3>
-                    <p>A Twitter Bot, uses Twitter API</p>
                     <img src="./images/project-3.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Twitter Bot</h3>
+                        <p>A Twitter Bot, uses Twitter API</p>
+                    </div>
                     <div class="project-info project-3-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/react-native.png" alt="">
@@ -118,14 +129,16 @@
                             <h3>Twitter Bot</h3>
                             <p>Frontend: React Native</p>
                             <p>Backend: Node.js, MongoDB, Rest Api</p>
-                            <p><a class="github" href="https://github.com/omeriliski/Twitter-Bot">Github Link</a></p>
+                            <a class="github" href="https://github.com/omeriliski/Twitter-Bot">Github Link</a>
                         </div>
                     </div>
                 </div>
                 <div class="project project-4">
-                    <h3>Socialmark App</h3>
-                    <p>My first Vuejs Project</p>
                     <img src="./images/project-4.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Socialmark App</h3>
+                        <p>My first Vuejs Project</p>
+                    </div>
                     <div class="project-info project-4-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/vue.png" alt="">
@@ -134,14 +147,16 @@
                         <div class="project-info-text-container">
                             <h3>Socialmark App</h3>
                             <p>Frontend: Vuejs</p>
-                            <p><a class="github" href="https://github.com/omeriliski/Vuejs-Examples/tree/main/BOOTCAMP/6.LESSON/socialmark-app">Github Link</a></p>
+                            <a class="github" href="https://github.com/omeriliski/Vuejs-Examples/tree/main/BOOTCAMP/6.LESSON/socialmark-app">Github Link</a>
                         </div>
                     </div>
                 </div>
                 <div class="project project-5">
-                    <h3>Restaurant App</h3>
-                    <p>A Mobile App by using Googlemaps API</p>
-                    <img src="./images/project-6.png" alt="">
+                    <img src="./images/project-5.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Restaurant App</h3>
+                        <p>A Mobile App by using Googlemaps API</p>
+                    </div>
                     <div class="project-info project-5-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/react-native.png" alt="">
@@ -150,16 +165,19 @@
                         <div class="project-info-text-container">
                             <h3>Restaurant App</h3>
                             <p>Frontend: React Native</p>
-                            <p>Axios, opentable.herokuapp restaurant API , Google maps API, Git, Github, Visual Studio Code</p>
-                            <p><a class="web" href="https://mern-aws.herokuapp.com/">https://mern-aws.herokuapp.com/</a></p>
-                            <p><a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a></p>
+                            <p>Axios, opentable.herokuapp restaurant API , Google maps API, Git, Github, Visual Studio
+                                Code</p>
+                            <a class="web" href="https://mern-aws.herokuapp.com/">https://mern-aws.herokuapp.com/</a>
+                            <a class="github" href="https://github.com/omeriliski/Amazon_MERN_Project">Github Link</a>
                         </div>
                     </div>
                 </div>
                 <div class="project project-6">
-                    <h3>Hegauer Verein Web Page</h3>
-                    <p>A Web page with WIX</p>
-                    <img src="./images/project-5.png" alt="">
+                    <img src="./images/project-6.png" alt="">
+                    <div class="project-text-container">
+                        <h3>Hegauer Verein Web Page</h3>
+                        <p>A Web page with WIX</p>
+                    </div>
                     <div class="project-info project-6-info">
                         <div class="info-logo-container">
                             <img class="info-logo1" src="./images/wix.png" alt="">
@@ -168,7 +186,7 @@
                         <div class="project-info-text-container">
                             <h3>Hegauer Verein Web Page</h3>
                             <p>Frontend: Wix</p>
-                            <p><a class="web" href="https://www.hegauerkulturverein.de/">https://www.hegauerkulturverein.de/</a></p>
+                            <a class="web" href="https://www.hegauerkulturverein.de/">https://www.hegauerkulturverein.de/</a>
                         </div>
                     </div>
                 </div>
@@ -181,9 +199,37 @@
 
         </section>
     </main>
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl text-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Amazon Clone</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video width="800" controls>
+                        <source src="./images/Amazon.mp4" type="video/mp4">
+                        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+                        Your browser does not support HTML video.
+                      </video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>© Copyright 2021. All right reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
