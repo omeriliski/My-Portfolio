@@ -6,9 +6,11 @@ html{
 }
 body {
     font-family: $generalFont;
+    position: relative;
 }
 
 .nav-container {
+    position: relative;
     width: 100%;
     height: 100px;
     display: flex;
@@ -20,25 +22,72 @@ body {
     left: 0px;
     top: 0px;
     z-index: 1;
+    #nav-input{
+        display: none;
+        &:checked + #nav-button .nav-span-1{
+            transform: rotate(45deg) translateY(15px) translateX(15px);
+            // background-color: red;
+        }
+        &:checked + #nav-button .nav-span-3{
+            transform: rotate(135deg) translateY(20px) translateX(-15px);
+            // background-color: blue;
+        }
+        &:checked + #nav-button .nav-span-2{
+            visibility: hidden;
+        }
+        &:checked ~ nav{
+            display: block !important;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            height: 30vh; 
+            background-color: black; 
+        }
+        &:checked ~ nav ul{
+            @include flex-center;
+            flex-direction: column;
+            // text-align: center;
+                   
+        }
+        &:checked ~ nav ul li{
+            margin-bottom: 10px;
+        }
+    }
+    
     .logo {
         margin-left: 20px;
-        width: 100px;
+        min-width: 100px;
     }
     nav{
         padding-top: 20px;
         height: 100%;
         display: flex;
-        align-items: center;
-        align-items: center;
         ul {
-            display: flex;
+            @include flex-center;
             li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 @include resetList;
                 a {
                     @include resetLink;
                     color: $nabvarTextColor;
                     font-weight: 500;
                     font-size: 18px;
+                    &:hover{
+                        color: $thirdTextColor;
+                    }
+                    &:hover + span{
+                        opacity:1 ;
+                    }
+                }
+                span{
+                    opacity: 0;
+                    display:inline-block;
+                    width: 100%;
+                    height:3px;
+                    background-color: $thirdTextColor;
                 }
             }
             .resources {
@@ -46,16 +95,27 @@ body {
             }
         }
     }
+    .nav-button-container {
+        .nav-span{
+            display: none;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            height: 3px;
+            width: 60px;
+            background-color: white;
+        }
+    }
 }
 
 header {
+    height: 90vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: $headerBackground;
     position: sticky;
     left: 0;
-    top: 100px;
+    top: 0px;
     z-index: -1;
     .left-header-container { 
         color: $headerTextColor;
@@ -87,23 +147,55 @@ header {
         }
 
         p {
+            color: $thirdTextColor;
             margin-top: 10px;
             font-size: 18px;
             margin-bottom: 40px;
         }
-        .my-github{
-            @include button1;
-            @include resetLink;
-            background-color: #8838B4;
-            color: white;
-        }
+        // .my-github{
+        //     @include button1;
+        //     @include resetLink;
+        //     background-color: #8838B4;
+        //     color: white;
+        // }
     }
 
     .header-img-container {
-        margin: 13vh 0px;
-
+        height: 100%;
+        @include flex-center;
         img {
             border-radius: 50%;
+            width: 400px;
+        }
+    }
+    .arrow-container{
+        position: absolute;
+        left: 50%;
+        top: 75vh;
+        .arrow{
+            margin-top: 10px;
+            width: 50px;
+            border-top: 2px solid white;
+        }
+        .arrow:nth-child(odd){
+            transform: rotate(30deg);
+        }
+        .arrow:nth-child(even){
+            transform: rotate(-30deg) translateX(43px) translateY(11px);
+        }
+        &>div{
+            animation-duration: 1.5s;
+            animation-name: arrow-animation;
+            animation-iteration-count: infinite;
+        }
+        .arrow-1{
+            animation-delay:.3s ;
+        }
+        .arrow-2{
+            animation-delay:.6s ;
+        }
+        .arrow-3{
+            animation-delay: .9s;
         }
     }
 }

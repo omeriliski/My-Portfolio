@@ -19,7 +19,7 @@
     background-color: $secondTextColor;
     padding: 15px 30px;
     border-radius: 30px;
-    color: black;
+    color: white;
 }
 @mixin  animated-text {
     animation-name: animated-text;
@@ -27,7 +27,7 @@
 }
 @mixin  animated-card {
     animation-name: animated-card;
-    animation-duration: .4s;
+    animation-duration: .8s;
     -webkit-box-shadow: 0px 0px 23px 0px white; 
     box-shadow: 0px 0px 23px 0px white;
 }
