@@ -1,79 +1,84 @@
 @media screen and (max-width:1400px) and (min-width:900px) {
-    main{
-        .section-1{
-            
+    main {
+        .section-1 {
+
             img {
                 width: 400px !important;
             }
         }
-        .projects-container{
+
+        .projects-container {
             grid-template-columns: repeat(2, 400px) !important;
             grid-template-rows: 400px 400px 400px !important;
-            
+
         }
     }
 }
 
 @media screen and (max-width:900px) {
-    .nav-container{
-        justify-content:flex-start !important;
-        a{
+    .nav-container {
+        justify-content: flex-start !important;
+
+        a {
             font-size: 16px !important;
 
         }
-        // nav{
-        //     width: 30% !important;
-        // }
     }
-    
-    header{
+
+    header {
         flex-direction: column-reverse;
-        .left-header-container{
+
+        .left-header-container {
             text-align: center;
         }
-        .arrow-container{
+
+        .arrow-container {
             left: 5% !important;
         }
     }
-    main{
-        .section-1-container{
+
+    main {
+        .section-1-container {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 100% !important;
-            h3,h2{
+            h3,
+            h2 {
                 text-align: center !important;
             }
-            
+
         }
-        .projects-container{
+
+        .projects-container {
             grid-template-columns: 400px !important;
         }
     }
-    .contact-container{
+
+    .contact-container {
         display: flex;
         flex-direction: column;
     }
 }
-@media screen and (max-width:768px){
-    .nav-container{
-        // width:100% !important;
-        
+
+@media screen and (max-width:768px) {
+    .nav-container {
         display: flex !important;
         justify-content: space-between !important;
-        
-        nav{
+
+        nav {
             display: none !important;
         }
-        
-        .nav-button-container{
+
+        .nav-button-container {
             margin-top: 10px;
-            .nav-span{
+
+            .nav-span {
                 display: block !important;
             }
         }
     }
-    header{
+
+    header {
         h3 {
             font-size: 16px !important;
         }
@@ -81,18 +86,31 @@
         h1 {
             font-size: 20px !important;
         }
-        h2,p{
+
+        h2,
+        p {
             font-size: 14px !important;
         }
-        .header-img-container{
-            img{
+
+        .header-img-container {
+            img {
                 width: 250px !important;
             }
         }
     }
-    .section-1-left{
-        img{
-            width: 300px !important;
+
+    main {
+        .section-1 {
+            .section-1-container {
+                .section-1-left {
+                    img {
+                        width: 250px !important;
+                    }
+                }
+                .section-1-right{
+                    width: 100% !important;
+                }
+            }
         }
     }
 }

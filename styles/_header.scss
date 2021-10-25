@@ -41,7 +41,7 @@ body {
             left: 0;
             top: 100px;
             width: 100%;
-            height: 30vh; 
+            height: 250px; 
             background-color: black; 
         }
         &:checked ~ nav ul{
@@ -57,7 +57,7 @@ body {
     
     .logo {
         margin-left: 20px;
-        min-width: 100px;
+        min-width: 80px;
     }
     nav{
         padding-top: 20px;
@@ -72,6 +72,7 @@ body {
                 @include resetList;
                 a {
                     @include resetLink;
+                    transition: .7s;
                     color: $nabvarTextColor;
                     font-weight: 500;
                     font-size: 18px;
@@ -152,12 +153,6 @@ header {
             font-size: 18px;
             margin-bottom: 40px;
         }
-        // .my-github{
-        //     @include button1;
-        //     @include resetLink;
-        //     background-color: #8838B4;
-        //     color: white;
-        // }
     }
 
     .header-img-container {
