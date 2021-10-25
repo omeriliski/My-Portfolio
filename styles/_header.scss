@@ -109,11 +109,13 @@ body {
 }
 
 header {
+    background-image: url(../images/background.gif);
+    background-size: cover;
     height: 90vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $headerBackground;
+    // background-color: $headerBackground;
     position: sticky;
     left: 0;
     top: 0px;
